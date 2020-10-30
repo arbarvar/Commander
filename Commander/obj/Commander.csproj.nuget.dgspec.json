@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\alireza\\source\\repos\\Commander\\Commander\\Commander.csproj": {}
+    "C:\\Users\\alireza\\Source\\Repos\\arbarvar\\Commander\\Commander\\Commander.csproj": {}
   },
   "projects": {
-    "C:\\Users\\alireza\\source\\repos\\Commander\\Commander\\Commander.csproj": {
+    "C:\\Users\\alireza\\Source\\Repos\\arbarvar\\Commander\\Commander\\Commander.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\alireza\\source\\repos\\Commander\\Commander\\Commander.csproj",
+        "projectUniqueName": "C:\\Users\\alireza\\Source\\Repos\\arbarvar\\Commander\\Commander\\Commander.csproj",
         "projectName": "Commander",
-        "projectPath": "C:\\Users\\alireza\\source\\repos\\Commander\\Commander\\Commander.csproj",
+        "projectPath": "C:\\Users\\alireza\\Source\\Repos\\arbarvar\\Commander\\Commander\\Commander.csproj",
         "packagesPath": "C:\\Users\\alireza\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\alireza\\source\\repos\\Commander\\Commander\\obj\\",
+        "outputPath": "C:\\Users\\alireza\\Source\\Repos\\arbarvar\\Commander\\Commander\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
