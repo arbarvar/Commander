@@ -2,14 +2,19 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Commander.Data;
+using Commander.Interfaces;
+using Commander.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
+//here is 5th  place to start programing by changing service to inject interface to implimented repository from controler
 namespace Commander
 {
     public class Startup
@@ -21,13 +26,19 @@ namespace Commander
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
+        
         public void ConfigureServices(IServiceCollection services)
         {
+
+            services.AddDbContext<CommanderContext>(opt => opt.UseSqlite(Configuration.GetConnectionString("CommanderConnection")));
+
             services.AddControllers();
+
+            //Add for conecting interface to implement
+            services.AddScoped<ICommanderRepo, MockCommanderRepo>();
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())

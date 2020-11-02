@@ -1,4 +1,5 @@
-﻿using Commander.Models;
+﻿using Commander.Interfaces;
+using Commander.Models;
 using Commander.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.ObjectPool;
@@ -8,13 +9,23 @@ using System.Linq;
 using System.Threading.Tasks;
 
 //here is 4th  place to start programing by creating a controller how from outside access to data by define rules
+//next step 6th  constructor for injection from Startup
 namespace Commander.Controllers
 {
     [Route("api/commands")]
     [ApiController]
     public class CommandsController : ControllerBase
     {
-        private readonly MockCommanderRepo _repository = new MockCommanderRepo();
+        private readonly ICommanderRepo _repository;
+
+        //private readonly MockCommanderRepo _repository = new MockCommanderRepo();
+
+        public CommandsController(ICommanderRepo repository)
+        {
+            _repository = repository;
+        }
+        
+        
 
         //GET api/commands
         [HttpGet]
