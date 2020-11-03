@@ -15,5 +15,9 @@ namespace Commander.Data
         }
 
         public DbSet<Command> Commands { get; set; }
+
+        //dotnet tool install --global dotnet-ef
+        //How to create migration: dotnet ef migrations add <Name of migration>
+        //how to run migration: dotnet ef migrations update
     }
 }
